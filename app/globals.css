@@ -1,0 +1,131 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* Updated color palette from warm earth tones to blue-based palette */
+  --background: oklch(0.98 0.005 240); /* Light blue-white #F8FAFF */
+  --foreground: oklch(0.25 0.08 240); /* Deep navy blue #1E3A8A */
+  --card: oklch(0.95 0.005 240); /* Soft blue-gray #F1F5F9 */
+  --card-foreground: oklch(0.25 0.08 240); /* Deep navy blue */
+  --popover: oklch(0.92 0.02 220); /* Light blue #E0F2FE */
+  --popover-foreground: oklch(0.25 0.08 240); /* Deep navy blue */
+  --primary: oklch(0.45 0.12 240); /* Rich blue #3B82F6 */
+  --primary-foreground: oklch(0.98 0.005 240); /* Light blue-white */
+  --secondary: oklch(0.85 0.03 220); /* Soft sky blue #BAE6FD */
+  --secondary-foreground: oklch(0.25 0.08 240); /* Deep navy blue */
+  --muted: oklch(0.88 0.005 240); /* Light blue-gray #E2E8F0 */
+  --muted-foreground: oklch(0.35 0.06 240); /* Medium blue */
+  --accent: oklch(0.75 0.02 200); /* Muted blue-gray #94A3B8 */
+  --accent-foreground: oklch(0.25 0.08 240); /* Deep navy blue */
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: oklch(0.98 0.005 240);
+  --border: oklch(0.75 0.02 200); /* Muted blue-gray */
+  --input: oklch(0.98 0.005 240); /* Light blue-white */
+  --ring: oklch(0.45 0.12 240 / 0.3); /* Soft blue ring */
+  --chart-1: oklch(0.45 0.12 240); /* Rich blue */
+  --chart-2: oklch(0.85 0.03 220); /* Soft sky blue */
+  --chart-3: oklch(0.88 0.005 240); /* Light blue-gray */
+  --chart-4: oklch(0.75 0.02 200); /* Muted blue-gray */
+  --chart-5: oklch(0.98 0.005 240); /* Light blue-white */
+  --radius: 0.5rem; /* Softer corner rounding */
+  --sidebar: oklch(0.98 0.005 240); /* Light blue-white */
+  --sidebar-foreground: oklch(0.25 0.08 240); /* Deep navy blue */
+  --sidebar-primary: oklch(0.85 0.03 220); /* Soft sky blue */
+  --sidebar-primary-foreground: oklch(0.25 0.08 240); /* Deep navy blue */
+  --sidebar-accent: oklch(0.75 0.02 200); /* Muted blue-gray */
+  --sidebar-accent-foreground: oklch(0.25 0.08 240); /* Deep navy blue */
+  --sidebar-border: oklch(0.88 0.005 240); /* Light blue-gray */
+  --sidebar-ring: oklch(0.45 0.12 240 / 0.3); /* Soft blue ring */
+  --font-lora: "Lora", serif;
+  --font-playfair: "Playfair Display", serif;
+}
+
+.dark {
+  /* Updated dark mode colors to blue-based palette */
+  --background: oklch(0.12 0.02 240); /* Dark navy background */
+  --foreground: oklch(0.95 0.005 240); /* Light blue-white text */
+  --card: oklch(0.15 0.02 240); /* Slightly lighter dark navy */
+  --card-foreground: oklch(0.95 0.005 240); /* Light blue-white */
+  --popover: oklch(0.15 0.02 240); /* Dark navy */
+  --popover-foreground: oklch(0.95 0.005 240); /* Light blue-white */
+  --primary: oklch(0.65 0.08 220); /* Bright sky blue as primary in dark */
+  --primary-foreground: oklch(0.12 0.02 240); /* Dark navy */
+  --secondary: oklch(0.22 0.03 240); /* Medium navy */
+  --secondary-foreground: oklch(0.95 0.005 240); /* Light blue-white */
+  --muted: oklch(0.22 0.03 240); /* Medium navy */
+  --muted-foreground: oklch(0.75 0.005 240); /* Muted blue-white */
+  --accent: oklch(0.32 0.04 220); /* Darker blue-gray */
+  --accent-foreground: oklch(0.95 0.005 240); /* Light blue-white */
+  --destructive: oklch(0.396 0.141 25.723);
+  --destructive-foreground: oklch(0.95 0.005 240);
+  --border: oklch(0.22 0.03 240); /* Medium navy */
+  --input: oklch(0.22 0.03 240); /* Medium navy */
+  --ring: oklch(0.65 0.08 220 / 0.3); /* Bright sky blue ring */
+  --chart-1: oklch(0.65 0.08 220); /* Bright sky blue */
+  --chart-2: oklch(0.75 0.02 200); /* Muted blue-gray */
+  --chart-3: oklch(0.95 0.005 240); /* Light blue-white */
+  --chart-4: oklch(0.45 0.12 240); /* Rich blue */
+  --chart-5: oklch(0.22 0.03 240); /* Medium navy */
+  --sidebar: oklch(0.12 0.02 240); /* Dark navy */
+  --sidebar-foreground: oklch(0.95 0.005 240); /* Light blue-white */
+  --sidebar-primary: oklch(0.65 0.08 220); /* Bright sky blue */
+  --sidebar-primary-foreground: oklch(0.12 0.02 240); /* Dark navy */
+  --sidebar-accent: oklch(0.22 0.03 240); /* Medium navy */
+  --sidebar-accent-foreground: oklch(0.95 0.005 240); /* Light blue-white */
+  --sidebar-border: oklch(0.22 0.03 240); /* Medium navy */
+  --sidebar-ring: oklch(0.65 0.08 220 / 0.3); /* Bright sky blue ring */
+}
+
+@theme inline {
+  /* Updated font variables to use elegant book club fonts */
+  --font-sans: var(--font-lora);
+  --font-serif: var(--font-playfair);
+  --font-mono: ui-monospace, SFMono-Regular, "SF Mono", Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+}
