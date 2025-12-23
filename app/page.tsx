@@ -166,7 +166,7 @@ export default function RosetoBookClub() {
             <h2 className="text-3xl font-serif font-bold text-blue-900 text-center mb-2">Join Roseto</h2>
             <p className="text-center text-slate-600 mb-8">Apply for membership for our 2025 season</p>
             <form 
-  action="https://formspree.io/f/https://formspree.io/f/xkowpenqE" 
+  action="https://formspree.io/f/xkowpenqE" 
   method="POST" 
   className="space-y-4"
 >
