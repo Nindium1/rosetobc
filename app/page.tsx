@@ -121,9 +121,9 @@ export default function RosetoBookClub() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {[
               { title: "Outliers", author: "Malcolm Gladwell", img: "/book1.jpg" },
-              { title: "Sample Book 2", author: "Coming Soon", img: "/book2.jpg" },
-              { title: "Sample Book 3", author: "Coming Soon", img: "/book3.jpg" },
-              { title: "Sample Book 4", author: "Coming Soon", img: "/book4.jpg" }
+              { title: "Petals of Blood", author: "Ngũgĩ wa Thiongo", img: "/book2.jpg" },
+              { title: "Can't Hurt Me", author: "David Goggins", img: "/book3.jpg" },
+              { title: "The Vegetarian", author: "Han Kang", img: "/book4.jpg" }
             ].map((book, i) => (
               <div key={i} className="group">
                 <div className="aspect-[3/4] rounded-xl overflow-hidden bg-slate-100 mb-4 shadow-sm group-hover:shadow-md transition-all">
