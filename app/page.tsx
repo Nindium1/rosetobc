@@ -27,7 +27,7 @@ export default function RosetoBookClub() {
           <p className="text-xl lg:text-2xl text-stone-600 mb-10 max-w-2xl mx-auto leading-relaxed">
             Where stories bring us together
           </p>
-          <a href="#join" className="bg-stone-900 text-white px-8 py-4 rounded-full font-medium hover:bg-stone-800 transition-all shadow-lg">
+          <a href="#join" className="inline-block bg-stone-900 text-white px-8 py-4 rounded-full font-medium hover:bg-stone-800 transition-all shadow-lg">
             Join Our Community
           </a>
         </div>
@@ -41,9 +41,8 @@ export default function RosetoBookClub() {
               <h2 className="font-serif text-4xl font-bold text-stone-900">About Roseto Book Club</h2>
               <p className="text-lg text-stone-600 leading-relaxed">
                 Founded in 2025, Roseto Book Club began as a small gathering of people who share a passion for literature. 
-                Named after the charming Italian town known for its close-knit community, and inspired by the first book we read – 
-                <span className="italic font-semibold text-stone-900"> The Outliers by Malcolm Gladwell </span> – 
-                we've grown into a welcoming space where readers of all backgrounds come together.
+                Named after the charming Italian town known for its close-knit community, and also inspired by 
+                the first book we read – <span className="italic font-semibold text-stone-900">The Outliers by Malcolm Gladwell</span> – we've grown into a welcoming space where readers of all backgrounds come together.
               </p>
               <p className="text-lg text-stone-600 leading-relaxed">
                 Our mission is simple: to foster meaningful connections through the power of storytelling. We believe that books have the unique ability to bridge differences, spark conversations, and create lasting friendships.
@@ -54,12 +53,10 @@ export default function RosetoBookClub() {
               </div>
             </div>
             <div className="rounded-2xl overflow-hidden shadow-2xl bg-stone-100 aspect-square">
-              {/* IMAGE ICON SPOT: This will show 'about-us.jpg' if you upload it */}
               <img 
                 src="/about-us.jpg" 
                 alt="Our Community" 
                 className="w-full h-full object-cover"
-                onError={(e) => { e.currentTarget.src = "https://images.unsplash.com/photo-1529148482759-b35b25c5f217?auto=format&fit=crop&q=80" }}
               />
             </div>
           </div>
@@ -71,17 +68,21 @@ export default function RosetoBookClub() {
         <div className="container mx-auto px-6 max-w-5xl">
           <h2 className="font-serif text-4xl font-bold text-center mb-16">How we do it</h2>
           <div className="grid md:grid-cols-3 gap-12">
-            {[
-              { title: "Book Selection", desc: "Members nominate and vote for quarterly reads in Self-help, African Literature, Autobiography, and Fiction." },
-              { title: "Reading Period", desc: "We read a book every quarter, sharing thoughts and questions in our online forum." },
-              { title: "Discussion Meeting", desc: "Monthly virtual meetings, and quarterly in-person gatherings with snacks and coffee." }
-            ].map((item, i) => (
-              <div key={i} className="space-y-4">
-                <div className="text-3xl font-serif text-stone-300">0{i+1}</div>
-                <h3 className="text-xl font-bold">{item.title}</h3>
-                <p className="text-stone-600 leading-relaxed">{item.desc}</p>
-              </div>
-            ))}
+            <div>
+              <div className="text-3xl font-serif text-stone-300 mb-4">01</div>
+              <h3 className="text-xl font-bold mb-2">Book Selection</h3>
+              <p className="text-stone-600 leading-relaxed">At the beginning of the year, members nominate and vote for our quarterly reads of the years based on these genres: Self-help, African Literature, Autobiography, Fiction.</p>
+            </div>
+            <div>
+              <div className="text-3xl font-serif text-stone-300 mb-4">02</div>
+              <h3 className="text-xl font-bold mb-2">Reading Period</h3>
+              <p className="text-stone-600 leading-relaxed">We read a book every quarter, sharing thoughts and questions in our online forum.</p>
+            </div>
+            <div>
+              <div className="text-3xl font-serif text-stone-300 mb-4">03</div>
+              <h3 className="text-xl font-bold mb-2">Discussion Meeting</h3>
+              <p className="text-stone-600 leading-relaxed">We have monthly virtual meetings, and quarterly in-person gathering that feature lively discussions, snacks, coffee, and great company.</p>
+            </div>
           </div>
         </div>
       </section>
@@ -94,18 +95,20 @@ export default function RosetoBookClub() {
             <div className="grid md:grid-cols-3 gap-10 text-center">
               <div>
                 <Video className="mx-auto mb-4 text-stone-400" />
-                <p className="font-bold mb-2">When</p>
-                <p className="text-stone-300 text-sm">Virtual: Last Sunday / Month @ 4 PM</p>
-                <p className="text-stone-300 text-sm">Physical: Last Sunday / Quarter @ 2 PM</p>
+                <p className="font-bold mb-2 text-stone-100">When</p>
+                <div className="text-stone-300 text-sm space-y-1">
+                  <p>Virtual: Every last Sunday / Month @ 4 PM</p>
+                  <p>Physical: Last Sunday / Quarter @ 2 PM</p>
+                </div>
               </div>
               <div>
                 <Coffee className="mx-auto mb-4 text-stone-400" />
-                <p className="font-bold mb-2">Where</p>
+                <p className="font-bold mb-2 text-stone-100">Where</p>
                 <p className="text-stone-300 text-sm">Local coffee cafes</p>
               </div>
               <div>
                 <Heart className="mx-auto mb-4 text-stone-400" />
-                <p className="font-bold mb-2">Duration</p>
+                <p className="font-bold mb-2 text-stone-100">Duration</p>
                 <p className="text-stone-300 text-sm">2 – 3 hours</p>
               </div>
             </div>
@@ -123,35 +126,32 @@ export default function RosetoBookClub() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {[
               { title: "Outliers", author: "Malcolm Gladwell", img: "/book1.jpg" },
-              { title: "Book Two", author: "Author", img: "/book2.jpg" },
-              { title: "Book Three", author: "Author", img: "/book3.jpg" },
-              { title: "Book Four", author: "Author", img: "/book4.jpg" }
+              { title: "Book Two", author: "Coming Soon", img: "/book2.jpg" },
+              { title: "Book Three", author: "Coming Soon", img: "/book3.jpg" },
+              { title: "Book Four", author: "Coming Soon", img: "/book4.jpg" }
             ].map((book, i) => (
-              <div key={i} className="group cursor-pointer">
-                <div className="aspect-[3/4] rounded-lg overflow-hidden bg-stone-100 mb-4 shadow-md group-hover:shadow-xl transition-all">
+              <div key={i} className="group">
+                <div className="aspect-[3/4] rounded-lg overflow-hidden bg-stone-100 mb-4 shadow-md transition-all">
                   <img 
                     src={book.img} 
                     alt={book.title} 
                     className="w-full h-full object-cover"
-                    onError={(e) => { e.currentTarget.src = "https://images.unsplash.com/photo-1544947950-fa07a98d237f?auto=format&fit=crop&q=80" }}
                   />
                 </div>
                 <h4 className="font-bold text-stone-900">{book.title}</h4>
                 <p className="text-sm text-stone-500">{book.author}</p>
-                <div className="mt-2 text-xs text-stone-400 italic">Member reviews coming soon...</div>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Footer / Join */}
+      {/* Footer */}
       <footer id="join" className="bg-[#f5f5f4] py-24 border-t border-stone-200">
         <div className="container mx-auto px-6 text-center">
           <h2 className="font-serif text-4xl font-bold mb-8">Ready to join the conversation?</h2>
           <div className="flex justify-center gap-6 mb-12">
             <Instagram className="w-6 h-6 cursor-pointer hover:text-stone-600" />
-            <Twitter className="w-6 h-6 cursor-pointer hover:text-stone-600" />
             <Mail className="w-6 h-6 cursor-pointer hover:text-stone-600" />
           </div>
           <p className="text-stone-400 text-sm">© 2025 Roseto Book Club. All rights reserved.</p>
