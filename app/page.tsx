@@ -165,14 +165,38 @@ export default function RosetoBookClub() {
           <div className="bg-slate-50 p-8 md:p-12 rounded-3xl border border-blue-50 shadow-inner">
             <h2 className="text-3xl font-serif font-bold text-blue-900 text-center mb-2">Join Roseto</h2>
             <p className="text-center text-slate-600 mb-8">Apply for membership for our 2025 season</p>
-            <form className="space-y-4">
-              <input className="w-full border border-slate-200 rounded-xl p-3 outline-none focus:ring-2 focus:ring-blue-400 bg-white" placeholder="Full Name" />
-              <input className="w-full border border-slate-200 rounded-xl p-3 outline-none focus:ring-2 focus:ring-blue-400 bg-white" type="email" placeholder="Email" />
-              <textarea className="w-full border border-slate-200 rounded-xl p-3 outline-none focus:ring-2 focus:ring-blue-400 bg-white" rows={3} placeholder="Tell us why you'd like to join..."></textarea>
-              <button type="button" className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 rounded-xl transition-all shadow-lg">
-                Submit Application
-              </button>
-            </form>
+            <form 
+  action="https://formspree.io/f/https://formspree.io/f/xkowpenqE" 
+  method="POST" 
+  className="space-y-4"
+>
+  <input 
+    name="name"
+    required
+    className="w-full border border-slate-200 rounded-xl p-3 outline-none focus:ring-2 focus:ring-blue-400 bg-white" 
+    placeholder="Full Name" 
+  />
+  <input 
+    name="email"
+    type="email" 
+    required
+    className="w-full border border-slate-200 rounded-xl p-3 outline-none focus:ring-2 focus:ring-blue-400 bg-white" 
+    placeholder="Email" 
+  />
+  <textarea 
+    name="message"
+    required
+    className="w-full border border-slate-200 rounded-xl p-3 outline-none focus:ring-2 focus:ring-blue-400 bg-white" 
+    rows={3} 
+    placeholder="Tell us why you'd like to join..."
+  ></textarea>
+  <button 
+    type="submit" 
+    className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 rounded-xl transition-all shadow-lg"
+  >
+    Submit Application
+  </button>
+</form>
           </div>
         </div>
       </section>
