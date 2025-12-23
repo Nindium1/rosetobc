@@ -33,9 +33,11 @@ export default function RosetoBookClub() {
           <p className="text-xl lg:text-2xl text-muted-foreground mb-8 max-w-2xl mx-auto">
             Where stories bring us together
           </p>
-          <Button size="lg" asChild className="bg-primary hover:bg-primary/90 text-primary-foreground">
-            <a href="#join">Join Our Community</a>
-          </Button>
+          <a href="#join">
+            <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
+              Join Our Community
+            </Button>
+          </a>
         </div>
       </section>
 
@@ -61,12 +63,10 @@ export default function RosetoBookClub() {
                 </div>
               </div>
               <div className="relative">
-                {/* INSTRUCTIONS: Upload your about photo to /public folder as 'about-us.jpg' */}
                 <img
                   src="/about-us.jpg" 
                   alt="Roseto Book Club gathering"
                   className="rounded-lg shadow-lg w-full object-cover aspect-square bg-muted"
-                  onError={(e) => { e.currentTarget.src = "/placeholder.svg?height=400&width=400" }}
                 />
               </div>
             </div>
@@ -134,9 +134,9 @@ export default function RosetoBookClub() {
               </div>
             </div>
 
-            <div className="mt-12 bg-card p-8 rounded-lg border border-border">
-              <h3 className="font-serif text-xl font-semibold text-primary mb-6 text-center">Meeting Details</h3>
-              <div className="grid md:grid-cols-3 gap-6 text-sm text-center">
+            <div className="mt-12 bg-card p-8 rounded-lg border border-border text-center">
+              <h3 className="font-serif text-xl font-semibold text-primary mb-6">Meeting Details</h3>
+              <div className="grid md:grid-cols-3 gap-6 text-sm">
                 <div>
                   <Video className="h-5 w-5 mx-auto mb-2 text-primary" />
                   <p className="font-semibold mb-1">When</p>
@@ -167,16 +167,15 @@ export default function RosetoBookClub() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
             {[
               { title: "Outliers", author: "Malcolm Gladwell", img: "/book1.jpg" },
-              { title: "Sample Book 2", author: "Author Name", img: "/book2.jpg" },
-              { title: "Sample Book 3", author: "Author Name", img: "/book3.jpg" },
-              { title: "Sample Book 4", author: "Author Name", img: "/book4.jpg" },
+              { title: "Book Title 2", author: "Author Name", img: "/book2.jpg" },
+              { title: "Book Title 3", author: "Author Name", img: "/book3.jpg" },
+              { title: "Book Title 4", author: "Author Name", img: "/book4.jpg" },
             ].map((book, index) => (
               <Card key={index} className="overflow-hidden hover:shadow-xl transition-all">
                 <img 
                   src={book.img} 
                   alt={book.title} 
                   className="w-full aspect-[3/4] object-cover bg-muted"
-                  onError={(e) => { e.currentTarget.src = "/placeholder.svg?height=300&width=200" }}
                 />
                 <CardContent className="p-4">
                   <h3 className="font-bold text-sm line-clamp-1">{book.title}</h3>
@@ -198,7 +197,6 @@ export default function RosetoBookClub() {
                 <CardDescription>Fill out the form below to join our next discussion</CardDescription>
               </CardHeader>
               <CardContent>
-                {/* ACTION: Change the URL below to your Formspree ID later */}
                 <form action="#" method="POST" className="space-y-4">
                   <div className="space-y-2">
                     <label className="text-sm font-medium">Full Name</label>
@@ -228,8 +226,8 @@ export default function RosetoBookClub() {
           </div>
           <p className="text-primary-foreground/80 mb-6">© 2025 Roseto Book Club. Where stories bring us together.</p>
           <div className="flex justify-center space-x-6">
-            <a href="https://instagram.com" className="hover:text-secondary"><Instagram /></a>
-            <a href="mailto:hello@yourdomain.com" className="hover:text-secondary"><Mail /></a>
+            <a href="https://instagram.com" className="hover:text-secondary"><Instagram className="h-6 w-6" /></a>
+            <a href="mailto:hello@yourdomain.com" className="hover:text-secondary"><Mail className="h-6 w-6" /></a>
           </div>
         </div>
       </footer>
