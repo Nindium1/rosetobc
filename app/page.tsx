@@ -136,25 +136,54 @@ export default function RosetoBookClub() {
 
       {/* Member Reviews Section */}
       <section id="reviews" className="py-20 bg-slate-50 border-y border-slate-100 px-4">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="font-serif text-4xl font-bold text-blue-900 mb-12">What Our Members Say</h2>
-          <div className="bg-white p-8 md:p-12 rounded-3xl shadow-sm border border-blue-50 relative text-left">
-            <Quote className="absolute top-6 left-6 text-blue-50 h-12 w-12" />
-            <div className="relative z-10">
-              <div className="flex items-center space-x-1 mb-4 text-yellow-500">
-                {[...Array(5)].map((_, i) => <Star key={i} className="fill-current h-4 w-4" />)}
-              </div>
-              <p className="text-slate-700 text-lg leading-relaxed mb-6 italic">
-                "Outliers was an eye-opener for our group. It challenged our ideas about success and sparked a deep conversation about how our own backgrounds shaped where we are today. Roseto provides the perfect space for these kinds of realizations."
-              </p>
-              <div className="flex items-center space-x-3">
-                <div className="h-10 w-10 rounded-full bg-blue-100 flex items-center justify-center text-blue-700 font-bold">R</div>
+        <div className="container mx-auto max-w-6xl">
+          <div className="text-center mb-12">
+            <h2 className="font-serif text-4xl font-bold text-blue-900 mb-4">Member Reflections</h2>
+            <p className="text-slate-500 text-sm italic">Scroll or swipe to see more reviews →</p>
+          </div>
+
+          {/* The Slider Container */}
+          <div className="flex overflow-x-auto gap-6 pb-8 snap-x snap-mandatory scrollbar-hide" style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}>
+            
+            {[
+              { 
+                book: "Outliers", 
+                text: "Gladwell’s breakdown of success sparked a huge debate. It really changed how we look at achievement—not just as hard work, but as a combination of timing and community.",
+                member: "Founding Member"
+              },
+              { 
+                book: "Petals of Blood", 
+                text: "A challenging but rewarding read. Ngũgĩ’s exploration of history and social change in Kenya led to a deeply emotional and insightful gathering.",
+                member: "Active Member"
+              },
+              { 
+                book: "Can't Hurt Me", 
+                text: "David Goggins really pushed our limits. It wasn't just a book discussion; it was a call to action. Several of us started new personal challenges!",
+                member: "Active Member"
+              },
+              { 
+                book: "The Vegetarian", 
+                text: "Haunting and poetic. This book pushed us out of our comfort zones and led to an incredible discussion about identity and society.",
+                member: "New Member"
+              }
+            ].map((review, i) => (
+              <div key={i} className="min-w-[300px] md:min-w-[400px] snap-center bg-white p-8 rounded-3xl shadow-sm border border-blue-50 flex flex-col justify-between hover:shadow-md transition-shadow">
                 <div>
-                  <p className="font-bold text-blue-950">Founding Member</p>
-                  <p className="text-xs text-slate-500 italic">Reviewing: Outliers</p>
+                  <Quote className="text-sky-100 h-8 w-8 mb-4" />
+                  <div className="flex text-yellow-500 mb-4">
+                    {[...Array(5)].map((_, i) => <Star key={i} className="fill-current h-3 w-3" />)}
+                  </div>
+                  <p className="text-slate-700 text-sm leading-relaxed mb-6 italic">
+                    "{review.text}"
+                  </p>
+                </div>
+                <div>
+                  <p className="font-bold text-blue-950 text-sm">{review.member}</p>
+                  <p className="text-xs text-slate-500 italic">Reviewing: {review.book}</p>
                 </div>
               </div>
-            </div>
+            ))}
+
           </div>
         </div>
       </section>
