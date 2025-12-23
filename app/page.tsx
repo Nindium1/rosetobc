@@ -1,8 +1,8 @@
-import { BookOpen, Users, Heart, Mail, Instagram, Coffee, Video } from "lucide-react"
+import { BookOpen, Users, Heart, Mail, Instagram, Coffee, Video, Star, Quote } from "lucide-react"
 
 export default function RosetoBookClub() {
   return (
-    <div className="min-h-screen bg-slate-50 text-slate-900">
+    <div className="min-h-screen bg-slate-50 text-slate-900 font-sans">
       {/* Navigation */}
       <nav className="sticky top-0 z-50 bg-white/90 backdrop-blur-sm border-b border-blue-100">
         <div className="container mx-auto px-4 py-4">
@@ -12,13 +12,14 @@ export default function RosetoBookClub() {
               <a href="#about" className="hover:text-blue-600 transition-colors">About Us</a>
               <a href="#how" className="hover:text-blue-600 transition-colors">How We Do It</a>
               <a href="#books" className="hover:text-blue-600 transition-colors">Books</a>
+              <a href="#reviews" className="hover:text-blue-600 transition-colors">Reviews</a>
               <a href="#join" className="hover:text-blue-600 transition-colors">Join</a>
             </div>
           </div>
         </div>
       </nav>
 
-      {/* Hero Section - The Sky Blue Gradient */}
+      {/* Hero Section */}
       <section className="relative py-20 lg:py-32 overflow-hidden bg-gradient-to-br from-blue-50 via-sky-50 to-indigo-50">
         <div className="container mx-auto px-4 text-center">
           <h1 className="font-serif text-5xl lg:text-7xl font-bold text-blue-950 mb-6">
@@ -34,7 +35,7 @@ export default function RosetoBookClub() {
       </section>
 
       {/* About Us */}
-      <section id="about" className="py-20 bg-white">
+      <section id="about" className="py-20 bg-white px-4">
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
@@ -53,19 +54,15 @@ export default function RosetoBookClub() {
               </div>
             </div>
             <div className="rounded-2xl overflow-hidden shadow-xl bg-blue-50 aspect-square border border-blue-100">
-              <img 
-                src="/about-us.jpg" 
-                alt="About Roseto" 
-                className="w-full h-full object-cover"
-              />
+              <img src="/about-us.jpg" alt="About Roseto" className="w-full h-full object-cover" />
             </div>
           </div>
         </div>
       </section>
 
       {/* How we do it */}
-      <section id="how" className="py-20 bg-slate-50 border-y border-slate-100">
-        <div className="container mx-auto px-4">
+      <section id="how" className="py-20 bg-slate-50 border-y border-slate-100 px-4">
+        <div className="container mx-auto">
           <h2 className="font-serif text-4xl font-bold text-center mb-16 text-blue-950">How we do it</h2>
           <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-white p-8 rounded-2xl shadow-sm border border-blue-50">
@@ -85,15 +82,15 @@ export default function RosetoBookClub() {
       </section>
 
       {/* Meeting Details */}
-      <section className="py-12 bg-white">
-        <div className="container mx-auto px-4">
+      <section className="py-12 bg-white px-4">
+        <div className="container mx-auto">
           <div className="max-w-4xl mx-auto bg-gradient-to-r from-blue-600 to-sky-600 text-white rounded-3xl p-8 md:p-12 shadow-lg">
             <h3 className="font-serif text-2xl font-bold mb-8 text-center">Meeting Details</h3>
             <div className="grid md:grid-cols-3 gap-8 text-center">
               <div>
                 <Video className="h-8 w-8 mx-auto mb-4 text-sky-100" />
                 <p className="font-bold">When</p>
-                <p className="text-sky-50 text-xs">Virtual: Last Sun of the  Month @ 4 PM</p>
+                <p className="text-sky-50 text-xs">Virtual: Last Sun of the Month @ 4 PM</p>
                 <p className="text-sky-50 text-xs">Physical: Last Sun of the Quarter @ 2 PM</p>
               </div>
               <div>
@@ -111,9 +108,9 @@ export default function RosetoBookClub() {
         </div>
       </section>
 
-      {/* Books we've read */}
-      <section id="books" className="py-20 bg-white">
-        <div className="container mx-auto px-4">
+      {/* Books Section */}
+      <section id="books" className="py-20 bg-white px-4">
+        <div className="container mx-auto">
           <div className="max-w-2xl mb-12">
             <h2 className="font-serif text-4xl font-bold text-blue-900 mb-4">Books we've read</h2>
             <p className="text-slate-600 font-medium italic">"From literary fiction to self-help, autobiographies to African literature – we explore all kinds of stories"</p>
@@ -121,17 +118,13 @@ export default function RosetoBookClub() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {[
               { title: "Outliers", author: "Malcolm Gladwell", img: "/book1.jpg" },
-              { title: "Petals of Blood", author: "Ngũgĩ wa Thiongo", img: "/book2.jpg" },
+              { title: "Petals of Blood", author: "Ngũgĩ wa Thiong'o", img: "/book2.jpg" },
               { title: "Can't Hurt Me", author: "David Goggins", img: "/book3.jpg" },
               { title: "The Vegetarian", author: "Han Kang", img: "/book4.jpg" }
             ].map((book, i) => (
               <div key={i} className="group">
                 <div className="aspect-[3/4] rounded-xl overflow-hidden bg-slate-100 mb-4 shadow-sm group-hover:shadow-md transition-all">
-                  <img 
-                    src={book.img} 
-                    alt={book.title} 
-                    className="w-full h-full object-cover"
-                  />
+                  <img src={book.img} alt={book.title} className="w-full h-full object-cover" />
                 </div>
                 <h4 className="font-bold text-slate-900 leading-tight">{book.title}</h4>
                 <p className="text-sm text-slate-500">{book.author}</p>
@@ -141,15 +134,58 @@ export default function RosetoBookClub() {
         </div>
       </section>
 
+      {/* Member Reviews Section */}
+      <section id="reviews" className="py-20 bg-slate-50 border-y border-slate-100 px-4">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="font-serif text-4xl font-bold text-blue-900 mb-12">What Our Members Say</h2>
+          <div className="bg-white p-8 md:p-12 rounded-3xl shadow-sm border border-blue-50 relative text-left">
+            <Quote className="absolute top-6 left-6 text-blue-50 h-12 w-12" />
+            <div className="relative z-10">
+              <div className="flex items-center space-x-1 mb-4 text-yellow-500">
+                {[...Array(5)].map((_, i) => <Star key={i} className="fill-current h-4 w-4" />)}
+              </div>
+              <p className="text-slate-700 text-lg leading-relaxed mb-6 italic">
+                "Outliers was an eye-opener for our group. It challenged our ideas about success and sparked a deep conversation about how our own backgrounds shaped where we are today. Roseto provides the perfect space for these kinds of realizations."
+              </p>
+              <div className="flex items-center space-x-3">
+                <div className="h-10 w-10 rounded-full bg-blue-100 flex items-center justify-center text-blue-700 font-bold">R</div>
+                <div>
+                  <p className="font-bold text-blue-950">Founding Member</p>
+                  <p className="text-xs text-slate-500 italic">Reviewing: Outliers</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Join Us Section */}
+      <section id="join" className="py-20 bg-white px-4">
+        <div className="max-w-xl mx-auto">
+          <div className="bg-slate-50 p-8 md:p-12 rounded-3xl border border-blue-50 shadow-inner">
+            <h2 className="text-3xl font-serif font-bold text-blue-900 text-center mb-2">Join Roseto</h2>
+            <p className="text-center text-slate-600 mb-8">Apply for membership for our 2025 season</p>
+            <form className="space-y-4">
+              <input className="w-full border border-slate-200 rounded-xl p-3 outline-none focus:ring-2 focus:ring-blue-400 bg-white" placeholder="Full Name" />
+              <input className="w-full border border-slate-200 rounded-xl p-3 outline-none focus:ring-2 focus:ring-blue-400 bg-white" type="email" placeholder="Email" />
+              <textarea className="w-full border border-slate-200 rounded-xl p-3 outline-none focus:ring-2 focus:ring-blue-400 bg-white" rows={3} placeholder="Tell us why you'd like to join..."></textarea>
+              <button type="button" className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 rounded-xl transition-all shadow-lg">
+                Submit Application
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+
       {/* Footer */}
-      <footer id="join" className="bg-slate-900 text-white py-16">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="font-serif text-3xl font-bold mb-8">Ready to join?</h2>
-          <div className="flex justify-center space-x-6 mb-8">
+      <footer className="bg-slate-900 text-white py-16 px-4">
+        <div className="container mx-auto text-center">
+          <div className="flex justify-center space-x-8 mb-8">
             <Instagram className="h-6 w-6 cursor-pointer hover:text-sky-400 transition-colors" />
             <Mail className="h-6 w-6 cursor-pointer hover:text-sky-400 transition-colors" />
           </div>
-          <p className="text-slate-400 text-sm">© 2025 Roseto Book Club. All rights reserved.</p>
+          <p className="text-slate-400 text-sm italic mb-2">"Named after the charming Italian town known for its close-knit community"</p>
+          <p className="text-slate-500 text-xs">© 2025 Roseto Book Club. All rights reserved.</p>
         </div>
       </footer>
     </div>
