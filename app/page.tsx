@@ -40,7 +40,7 @@ export default function RosetoBookClub() {
             <div className="space-y-6">
               <h2 className="font-serif text-4xl font-bold text-blue-900">About Roseto Book Club</h2>
               <p className="text-lg leading-relaxed text-slate-700">
-                Founded in 2025, Roseto Book Club began as a small gathering of people who share a passion for literature. 
+                Founded in 2025, Roseto Book Club began as a small community of people who share a passion for literature. 
                 Named after the charming Italian town known for its close-knit community, and also inspired by 
                 the first book we read – <span className="font-bold text-blue-800 italic">The Outliers by Malcolm Gladwell</span> – we've grown into a welcoming space where readers of all backgrounds come together.
               </p>
@@ -93,8 +93,8 @@ export default function RosetoBookClub() {
               <div>
                 <Video className="h-8 w-8 mx-auto mb-4 text-sky-100" />
                 <p className="font-bold">When</p>
-                <p className="text-sky-50 text-xs">Virtual: Last Sun / Month @ 4 PM</p>
-                <p className="text-sky-50 text-xs">Physical: Last Sun / Quarter @ 2 PM</p>
+                <p className="text-sky-50 text-xs">Virtual: Last Sun of the  Month @ 4 PM</p>
+                <p className="text-sky-50 text-xs">Physical: Last Sun of the Quarter @ 2 PM</p>
               </div>
               <div>
                 <Coffee className="h-8 w-8 mx-auto mb-4 text-sky-100" />
