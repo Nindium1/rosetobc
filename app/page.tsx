@@ -79,7 +79,7 @@ export default function RosetoBookClub() {
             </div>
             <div className="bg-white p-8 rounded-2xl shadow-sm border border-blue-50">
               <h3 className="text-xl font-bold mb-4 text-blue-800">Annual Membership Fee</h3>
-              <p className="text-slate-600 text-sm leading-relaxed">Members contribute an annual fee of <span className="font-semibold text-blue-700">KES 1,000</span> to help sustain and grow the book club — covering shared resources, meeting costs, and community activities.</p>
+              <p className="text-slate-600 text-sm leading-relaxed">Members contribute an annual fee of <span className="font-semibold text-blue-700">KES 1,000</span> to help sustain and grow the book club.</p>
             </div>
           </div>
         </div>
