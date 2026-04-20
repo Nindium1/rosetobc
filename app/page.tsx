@@ -64,7 +64,7 @@ export default function RosetoBookClub() {
       <section id="how" className="py-20 bg-slate-50 border-y border-slate-100 px-4">
         <div className="container mx-auto">
           <h2 className="font-serif text-4xl font-bold text-center mb-16 text-blue-950">How we do it</h2>
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="bg-white p-8 rounded-2xl shadow-sm border border-blue-50">
               <h3 className="text-xl font-bold mb-4 text-blue-800">Book Selection</h3>
               <p className="text-slate-600 text-sm leading-relaxed">At the beginning of the year, members nominate and vote for our quarterly reads based on these genres: Self-help, African Literature, Autobiography, Fiction.</p>
@@ -76,6 +76,10 @@ export default function RosetoBookClub() {
             <div className="bg-white p-8 rounded-2xl shadow-sm border border-blue-50">
               <h3 className="text-xl font-bold mb-4 text-blue-800">Discussion Meeting</h3>
               <p className="text-slate-600 text-sm leading-relaxed">We have monthly virtual meetings, and quarterly in-person gathering that feature lively discussions, snacks, and coffee.</p>
+            </div>
+            <div className="bg-white p-8 rounded-2xl shadow-sm border border-blue-50">
+              <h3 className="text-xl font-bold mb-4 text-blue-800">Annual Membership Fee</h3>
+              <p className="text-slate-600 text-sm leading-relaxed">Members contribute an annual fee of <span className="font-semibold text-blue-700">KES 1,000</span> to help sustain and grow the book club — covering shared resources, meeting costs, and community activities.</p>
             </div>
           </div>
         </div>
@@ -115,12 +119,13 @@ export default function RosetoBookClub() {
             <h2 className="font-serif text-4xl font-bold text-blue-900 mb-4">Books we've read</h2>
             <p className="text-slate-600 font-medium italic">"From literary fiction to self-help, autobiographies to African literature – we explore all kinds of stories"</p>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-5 gap-6">
             {[
               { title: "Outliers", author: "Malcolm Gladwell", img: "/book1.jpg" },
               { title: "Petals of Blood", author: "Ngũgĩ wa Thiong'o", img: "/book2.jpg" },
               { title: "Can't Hurt Me", author: "David Goggins", img: "/book3.jpg" },
-              { title: "The Vegetarian", author: "Han Kang", img: "/book4.jpg" }
+              { title: "The Vegetarian", author: "Han Kang", img: "/book4.jpg" },
+              { title: "Mindset", author: "Carol Dweck", img: "/book5.jpg" }
             ].map((book, i) => (
               <div key={i} className="group">
                 <div className="aspect-[3/4] rounded-xl overflow-hidden bg-slate-100 mb-4 shadow-sm group-hover:shadow-md transition-all">
@@ -148,12 +153,12 @@ export default function RosetoBookClub() {
             {[
               { 
                 book: "Outliers", 
-                text: "Gladwell’s breakdown of success sparked a huge debate. It really changed how we look at achievement—not just as hard work, but as a combination of timing and community.",
+                text: "Gladwell's breakdown of success sparked a huge debate. It really changed how we look at achievement—not just as hard work, but as a combination of timing and community.",
                 member: "Founding Member"
               },
               { 
                 book: "Petals of Blood", 
-                text: "A challenging but rewarding read. Ngũgĩ’s exploration of history and social change in Kenya led to a deeply emotional and insightful gathering.",
+                text: "A challenging but rewarding read. Ngũgĩ's exploration of history and social change in Kenya led to a deeply emotional and insightful gathering.",
                 member: "Active Member"
               },
               { 
@@ -195,37 +200,37 @@ export default function RosetoBookClub() {
             <h2 className="text-3xl font-serif font-bold text-blue-900 text-center mb-2">Join Roseto</h2>
             <p className="text-center text-slate-600 mb-8">Apply for membership for our 2025 season</p>
             <form 
-  action="https://formspree.io/f/xkowpenq" 
-  method="POST" 
-  className="space-y-4"
->
-  <input 
-    name="name"
-    required
-    className="w-full border border-slate-200 rounded-xl p-3 outline-none focus:ring-2 focus:ring-blue-400 bg-white" 
-    placeholder="Full Name" 
-  />
-  <input 
-    name="email"
-    type="email" 
-    required
-    className="w-full border border-slate-200 rounded-xl p-3 outline-none focus:ring-2 focus:ring-blue-400 bg-white" 
-    placeholder="Email" 
-  />
-  <textarea 
-    name="message"
-    required
-    className="w-full border border-slate-200 rounded-xl p-3 outline-none focus:ring-2 focus:ring-blue-400 bg-white" 
-    rows={3} 
-    placeholder="Tell us why you'd like to join..."
-  ></textarea>
-  <button 
-    type="submit" 
-    className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 rounded-xl transition-all shadow-lg"
-  >
-    Submit Application
-  </button>
-</form>
+              action="https://formspree.io/f/xkowpenq" 
+              method="POST" 
+              className="space-y-4"
+            >
+              <input 
+                name="name"
+                required
+                className="w-full border border-slate-200 rounded-xl p-3 outline-none focus:ring-2 focus:ring-blue-400 bg-white" 
+                placeholder="Full Name" 
+              />
+              <input 
+                name="email"
+                type="email" 
+                required
+                className="w-full border border-slate-200 rounded-xl p-3 outline-none focus:ring-2 focus:ring-blue-400 bg-white" 
+                placeholder="Email" 
+              />
+              <textarea 
+                name="message"
+                required
+                className="w-full border border-slate-200 rounded-xl p-3 outline-none focus:ring-2 focus:ring-blue-400 bg-white" 
+                rows={3} 
+                placeholder="Tell us why you'd like to join..."
+              ></textarea>
+              <button 
+                type="submit" 
+                className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 rounded-xl transition-all shadow-lg"
+              >
+                Submit Application
+              </button>
+            </form>
           </div>
         </div>
       </section>
