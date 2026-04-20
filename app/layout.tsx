@@ -4,9 +4,12 @@ import { GeistMono } from 'geist/font/mono'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'v0 App',
-  description: 'Created with v0',
+  title: 'Roseto Book Club',
+  description: 'A community of readers brought together by the power of storytelling.',
   generator: 'v0.app',
+  icons: {
+    icon: 'https://fav.farm/📚',
+  },
 }
 
 export default function RootLayout({
